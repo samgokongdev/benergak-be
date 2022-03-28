@@ -14,7 +14,7 @@ class DaftarsoalController extends Controller
      */
     public function index()
     {
-        return Daftarsoal::inRandomOrder()->limit(1)->get();
+        return Daftarsoal::inRandomOrder()->limit(1)->get(['id','soal']);
     }
 
     /**
@@ -36,7 +36,7 @@ class DaftarsoalController extends Controller
      */
     public function show($id)
     {
-        //
+        return Daftarsoal::find($id);  
     }
 
     /**
